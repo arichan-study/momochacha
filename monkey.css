@@ -1,0 +1,875 @@
+@charset: "utf-8";
+
+html {padding: 5px;
+	font-size:100%;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+  	font-family:'メイリオ', 'Meiryo', sans-serif;
+	line-height: 1.7;
+	color: black;
+	background-color: white;
+}
+
+
+h2 {
+	font-size: 50px;
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+
+header {
+  display: flex;
+}
+
+
+.fix-01{
+    background:#fff; /背景を白色に/
+    box-shadow:0 2px 8px rgba(30,30,80,.3); /影。不要なら削除/
+    left:0;
+    line-height:1;
+    position:fixed;
+    top:0;
+    width:90%;
+    z-index:100;
+    text-align:center;
+    padding: 0;
+}
+li {
+	font-size: ;
+	list-style: none;
+}
+#nav-drawer {
+  position: relative;
+
+}
+
+/*チェックボックス等は非表示に*/
+.nav-unshown {
+  display:none;
+}
+
+/*アイコンのスペース*/
+#nav-open {
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  vertical-align: middle;
+}
+
+/*ハンバーガーの形をCSSで表現*/
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;/*線の太さ*/
+  width: 25px;/*長さ*/
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+#nav-open span:before {
+  bottom: -8px;
+}
+#nav-open span:after {
+  bottom: -16px;
+}
+
+/*閉じる用の薄黒箇所*/
+#nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 10px;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+/*メニューの中身*/
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+ 　left: 0;
+  z-index: 9999;
+  width: 90%;
+  max-width: 300px;/*最大幅（お好みで調整を）*/
+  height: 100%;
+  background: #fff;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*チェックがついたら表示させる*/
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+#nav-content ul li a {
+	margin-bottom: 3%;
+}
+#nav-content ul li span {
+	text-align: center;
+	padding-left: 0;
+}
+#nav-content ul {
+	text-align: center;
+	padding-left: 0;
+}
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.header-logo-menu{
+ display: flex;
+ display: -moz-flex;
+ display: -o-flex;
+ display: -webkit-flex;
+ display: -ms-flex;
+ flex-direction: row;
+ -moz-flex-direction: row;
+ -o-flex-direction: row;
+ -webkit-flex-direction: row;
+ -ms-flex-direction: row;
+}
+
+/*ロゴやサイトタイトルをセンタリング*/
+.logo-area{text-align:center;margin:auto;}
+.logo-area {
+	width: 100%;
+	height: 80px;
+	display: flex;
+
+}
+
+h1 {
+	padding-top: 15px;
+	position: relative;
+	bottom: 30px;
+	font-size: 30px;
+	margin-left: 60px;
+}
+
+<style>
+a { text-decoration: none;}
+a:hover { text-decoration: none;}
+</style>
+.main-nav {
+	list-style: none;
+	margin-left: 30px;
+}
+
+.main-nav li {
+	font-size: 17px;
+	float: left;
+	margin-left: 15px;
+}
+
+#tel {
+	margin-left: 40px;
+	position: relative;
+	bottom: 8px;
+
+}
+#tel span {
+	font-size: 25px;
+}
+
+.fix-01{
+    background:#fff; /背景を白色に/
+    box-shadow:0 2px 8px rgba(30,30,80,.3); /影。不要なら削除/
+    left:0;
+    line-height:1;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    text-align:center;
+}
+
+.box {
+	padding-top: 115px;
+	width: 100%;
+	height: 610px;
+	background-repeat: no-repeat;
+	background-size: 100% 700px;
+	object-fit: cover;
+	object-position: center center;   
+   position: relative;
+   }
+
+.box {
+  position   : relative;
+  max-width  : 100%;
+  height     : 610px;
+  margin     : auto;
+  overflow   : hidden;
+}
+
+/* --- 背景の指定 ------------------------------------------- */
+.box .bgImg {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  bottom     : 0;
+  right      : 0;
+  opacity    : 0;
+  animation  : bgAnime 20s infinite;   /* 4画像 × 各5s = 20s */
+}
+
+/* --- 段差で背景画像のアニメーションを実行 ----------------- */
+.box .src1 {
+	background-repeat: no-repeat;
+  background-image : url(BeFunky-photo.jpg);
+background-size: cover;
+width: 100%;
+height: 610px; 
+}
+.box .src2 {
+  background-image : url(B612_20210416_120410_561_copy_1260x604_1.jpg); 
+  animation-delay  : 3s;
+  background-size: 100% 610px; 
+  background-repeat: no-repeat;
+  width: 100%;
+height: 610px; 
+}
+.box .src3 {
+  background-image : url(B612_20210416_122629_691.jpg);   /* 背景の画像を指定 */
+  animation-delay  : 6s;
+  background-size: 100% 610px; 
+  background-repeat: no-repeat;
+
+}
+.box .src4 {
+  background-image : url(B612_20210418_112047_062_copy_1270x610_1.jpg);
+  animation-delay  : 8s;
+  background-size: 100% 610px;  
+  background-repeat: no-repeat;
+
+}
+
+@keyframes bgAnime {
+   0% { opacity: 0; }
+   5% { opacity: 1; }
+  25% { opacity: 1; }
+  30% { opacity: 0; }
+ 100% { opacity: 0; }
+}
+
+/* --- 前面の文字定義（サンプルのため変更してください） ----- */
+.box .boxString{
+  position   : absolute;
+  display    : inline-block;
+  padding    : 20px;
+  background : rgba(0, 127, 255, 0.7);          /* 半透明の青 */
+  color      : #fff;
+  top        : 50%;                               /* 中央寄せ */
+  left       : 50%;
+  transform  : translate(-50%,-50%);
+  z-index    : 11;
+}
+
+.copy p{
+   	font-size: 40px;
+   	color: white;
+   	display: table-cell;
+   	vertical-align: middle;
+   	position: absolute;
+   	top: 70%;
+   	left: 50%;
+   }
+.concept {
+	display: flex;
+	margin-top: 90px;
+	margin-top: 130px;
+	margin-bottom: 35px;
+}
+.conceptimage {
+	width: 650px;
+	height: 430px;
+	margin-left: 60px;
+}
+
+.wrapper {
+	width: 490px;
+	height: 475px;
+}
+.concept h2 {
+	text-align: center;
+	font-size: 50px;
+}
+
+.concept p {
+	margin-left: 85px;
+	font-size: 17px;
+}
+.concept h3 {
+	text-align: center;
+}
+
+
+.menu {
+	width: 100%;
+}
+.menu p {
+	text-align: center;
+}
+.smallmenu {
+	width: 900px;
+	margin-left: 200px;
+	display: flex;
+	position: relative;
+	border-bottom: solid 2px;
+}
+.smallmenu span {
+	position: absolute;
+	right: 0px;
+	text-align: right;
+}
+
+
+.shop {
+	margin-top: 100px;
+	display: flex;
+}
+.shopimage img{
+	width: 650px;
+	height: 430px;
+}
+
+.smallshop {
+	width: 490px;
+	height: 450px;
+}
+
+.smallshop p {
+	text-align: center;
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+.smallshop image {
+	width: 655px;
+	height: 430px;
+}
+
+.style {
+	margin-right: 30px;
+	margin-left: 30px;
+	margin-top: 120px;
+	margin-bottom: 30px;
+}
+.stylesmall {
+	width: 100%;
+	text-align: center;
+	float: left;
+	display: grid;
+	gap: 3px;
+	grid-template-columns: repeat(3, minmax(330px,1fr));
+
+}
+
+.style img {
+	text-align: center;
+	width: 300px;
+	height: 300px;
+}
+
+
+
+.product {
+	width: 100%;
+	height: 430px;
+	margin-top: 100px;
+}
+
+.smallproduct {
+	text-align: center;
+	width: 490px;
+	height: 450px;
+}
+
+.smallproduct p {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 17px;
+	margin-bottom: 30px;
+}
+.product image {
+	width: 655px;
+	height: 430px;
+}
+
+
+
+
+.f {
+	margin-top: 100px;
+	text-align: center;
+}
+.h {
+	display: flex;
+}
+
+.h p {
+	margin-left: 300px;
+	text-align: center;
+}
+.h p span {
+	text-align: center;
+}
+
+
+.product {
+	display: flex;
+}
+
+
+.footer {
+	background: #432;
+	text-align: center;
+	padding: 26px 0;
+}
+
+footer p {
+	color: white;
+	font-size: 0.875rem;
+}
+
+
+#nav-content nav li a{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*モバイル版ここから*/
+@media screen and (min-width: 600px) {
+	#nav-drawer {
+		display: none;
+	}
+}
+
+
+
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 10px;
+	}
+	h1{
+		font-size: 2rem;
+	}
+	img {
+		width: 100%;
+		height: 300px;
+	}
+	header {
+		width: auto;
+		height: 45px;
+		flex-direction: column;
+		text-align: center;
+	}
+	.logo img {
+		width: 40px;
+		height: 40px;
+		line-height: auto;
+		text-align: center;
+	}
+	h1 {
+		margin-top: 6%;
+		margin-left: 10px;
+		font-size: 23px;
+	position: relative;
+	line-height: center;
+}
+	.src1 {
+		background-size: 100% 300px;
+	}
+
+	.main-nav li {
+		display: none;
+		height: 45px;
+	}
+	#nav-drawer {
+		height: 45px;
+	}
+	li {
+		font-size: 20px;
+	
+	}
+.box {
+	width: 100%;
+	height: 300px;
+}
+#nav-open {
+	width: 70px;
+}	
+/*ヘッダーここから*/
+.main-nav {
+	font-size: 1rem;
+	margin-top: 10px;
+}
+
+.main-nav li {
+	margin: 0 20px;
+}
+.copy p {
+	font-size: 25px;
+   	color: white;
+   	display: table-cell;
+   	vertical-align: middle;
+   	position: absolute;
+   	left: 35%;	
+   	top: 35%;
+}
+#tel {
+	margin-top: 2%;
+	position: relative;
+	bottom: 8px;
+	text-align: center;
+	margin-left: 0;
+
+}
+#nav_toggle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 4px;
+    z-index: 100;
+}
+
+
+/*ヘッダーここまで*/
+.concept {
+	font-size: 12px;
+	width: 100%;
+	margin-left: 0;
+	flex-direction: column;
+	text-align: center;
+	position: relative;
+
+}	
+.conceptimage {
+	width: 90%;
+	height: 250px;
+	margin: 0;
+}
+.conceptimage img {
+	width: 90%;
+	text-align: center;
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	}
+.conceptconcept {
+	width: 90%;
+}
+
+.wrapper h2 {
+	margin-left: 0;
+font-size: 38px;	
+}
+.wrapper {
+	width: 90%;
+}
+.wrapper p {
+	width: 90%;
+}
+.wrapper h3 {
+	margin-top: 10%;
+	font-size: 20px;
+}
+.concept p {
+	width: 90%;
+	margin-left: auto;
+	text-align: left;
+
+}
+/*ショップ*/
+.shop {
+	width: 90%;
+	flex-direction: column;
+	margin: 0;
+}
+.shop h2 {
+	font-size: 38px;
+}
+.shopimage img {
+	width: 90%;
+	height: 250px;
+
+	order: 1;
+}
+.smallshop {
+	width: 90%;
+	text-align: center;
+	order: 2;
+	height: 270px;
+}
+.smallshop h2 {
+	margin-left: 0;
+}
+.smallshop p {
+	margin-left: 5%
+}
+.smallshop h3 {
+	margin-top: 10%;
+	font-size: 20px;
+}
+.a {
+	order: 3;
+}
+/*ショップここまで*/
+
+/*menuここから*/
+.munu {
+	width: 90%;
+	height: 200px;
+	position: absolute;
+	margin: 0;
+}
+.menu h2 {
+	text-align: center;
+	font-size: 38px;
+}
+.menu p {
+	text-align: center;
+	font-size: 13px;
+}
+.menu h3 {
+	font-size: 18px;
+}
+.smallmenu {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	border-bottom: solid 1px;
+}
+.smallmenu p {
+	font-size: 12px;
+}
+.smallmenu h3 {
+	margin-top: 5%;
+	font-size: 12px;
+	margin-left: 3%;
+}
+
+.smallmenu span {
+	position: absolute;
+	right: 8%;
+}
+/*menuここまで*/
+
+
+/*styleここから*/
+.style {
+
+	width: 90%;
+	height: 200px;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+.style h2 {
+	text-align: center;
+	font-size: 38px;
+}
+.style p {
+	text-align: center;
+	font-size: 15px;
+}
+.style h3 {
+	font-size: 20px;
+}
+.shop {
+	flex-direction: column;
+	margin-left: none;
+}
+.stylesmall img {
+	width: 180px;
+	height: 180px;
+}
+
+.smallshop h2 {
+	order: 2;
+	margin-left: 0;
+	
+}
+
+.stylesmall h3 {
+	margin-top: 10%;
+	font-size: 20px;
+}
+.stylesmall {
+	width: 100%;
+	text-align: center;
+	float: left;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(180px,1fr));
+
+}
+
+/*styleここまで*/
+
+/*productここから*/
+
+.product {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: column;
+}
+.product img {
+	padding-top: 50px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.product h2 {
+	font-size: 38px;
+	text-align: center;
+}
+.product p {
+	text-align: center;
+}
+.product h3 {
+	padding-top: 20px;
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+/*productここまで*/
+.smallproduct {
+	width: 100%;
+}
+/*fここから*/
+.f {
+	width: auto;
+	line-height: 20px;
+	flex-direction: column;
+	margin-left: none;
+}
+.f p {
+	margin-top: 10%;
+	font-size: 20px;
+}
+.f img {
+	margin-top: 30%;
+	width: 70px;
+	height: 70px;
+	text-align: center;
+}
+
+/*fここまで*/
+
+
+/*hここから*/
+li {
+		line-height: 35px;
+		font-size: 20px;
+	
+	}
+/*hここまで*/
+.item1 p{
+	font-size: 8px;
+}
+.item2 p{
+	font-size: 8px;
+}
+.item3 p{
+	font-size: 8px;
+}
+.item4 p{
+	font-size: 8px;
+}
+.item5 p{
+	font-size: 8px;
+}
+.item6 p{
+	font-size: 8px;
+}
+.concept {
+	display: block;
+	text-align: center;
+}
+.conceptimage img{
+	margin-left: 0;
+	text-align: center;
+	width: 90%;
+	
+}
+
+
+h1 {
+		padding-top: 4%;
+		padding-left: 5px;
+		font-size: 23px;
+	position: relative;
+	line-height: auto;
+}
+.smallshop {
+	margin: 0;
+	text-align: center;
+}
+
+.shop {
+	padding-top: 100px;
+}
+.shopimage img{
+	display: inline-block;
+	width: 90%;
+	height: 300px;
+	order: 1;
+}
+
+
+.smallshop p {
+	width: 100%;
+	order: 3;
+	text-align: center;
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+
+.shop {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+}
+/*モバイル版ここまで*/
