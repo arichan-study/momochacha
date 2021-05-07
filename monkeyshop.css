@@ -960,7 +960,9 @@ html {
 	width: 100%;
 }
 
-
+.smallinformation img {
+	width: 90%;
+}
 
 
 
