@@ -61,7 +61,7 @@ header {
 	height: 400px;
 	display: table-cell;
 	vertical-align: middle;
-	background: url(monkeyproduct.png);
+	background: url("monkeyproduct.png");
 	background-repeat: no-repeat;
 	object-fit: cover;
 	background-size: 100% 400px;
