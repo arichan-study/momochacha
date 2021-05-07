@@ -291,7 +291,7 @@ height: 610px;
    	vertical-align: middle;
    	position: absolute;
    	top: 70%;
-   	left: 50%;
+   	left: 10%;
    }
 .concept {
 	display: flex;
@@ -544,8 +544,8 @@ footer p {
    	display: table-cell;
    	vertical-align: middle;
    	position: absolute;
-   	left: 35%;	
-   	top: 35%;
+   	left: 10%;	
+   	top: 25%;
 }
 #tel {
 	margin-top: 2%;
